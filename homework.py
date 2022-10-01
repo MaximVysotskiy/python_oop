@@ -15,7 +15,7 @@ class InfoMessage:
                               'Дистанция: {distance:.3f} км; '
                               'Ср. скорость: {speed:.3f} км/ч; '
                               'Потрачено ккал: {calories:.3f}.')
-    
+
     def get_message(self) -> str:
         return self.message.format(**asdict(self))
 
@@ -56,7 +56,7 @@ class Training:
                            self.get_distance(),
                            self.get_mean_speed(),
                            self.get_spent_calories()
-                           )
+                          )
 
 
 class Running(Training):
