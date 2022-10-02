@@ -118,11 +118,17 @@ class Swimming(Training):
                 * self.SW_COEFF_2 * self.weight)
 
 
+type_class: Dict[str, type[Training]] = {
+        'RUN': Running,
+        'WLK': SportsWalking,
+        'SWM': Swimming
+        }
+
+
 def read_package(workout_type: str, data: list) -> Training:
     """Прочитать данные полученные от датчиков."""
-    type_class: Dict[str, type[Training]] = {'RUN': Running,
-                                       'WLK': SportsWalking,
-                                       'SWM': Swimming}
+    if workout_type not in reed_data:
+        raise ValueError(f'Такой тренировки - {workout_type}, не найдено')
     return type_class[workout_type](*data)
 
 
