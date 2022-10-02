@@ -118,7 +118,7 @@ class Swimming(Training):
                 * self.SW_COEFF_2 * self.weight)
 
 
-type_class: Dict[str, type[Training]] = {'RUN': Running,
+type_class: Dict[str, Training] = {'RUN': Running,
                                          'WLK': SportsWalking,
                                          'SWM': Swimming}
 
