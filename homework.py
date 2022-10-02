@@ -119,8 +119,8 @@ class Swimming(Training):
 
 
 type_class: Dict[str, Training] = {'RUN': Running,
-                                         'WLK': SportsWalking,
-                                         'SWM': Swimming}
+                                   'WLK': SportsWalking,
+                                   'SWM': Swimming}
 
 
 def read_package(workout_type: str, data: list) -> Training:
